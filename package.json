@@ -1,0 +1,15 @@
+{
+  "name": "gatsby-theme-schedule",
+  "private": true,
+  "version": "0.2.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "develop": "yarn workspace example develop",
+    "debug": "yarn workspace example debug"
+  },
+  "workspaces": [
+    "@hawkstein/gatsby-theme-schedule",
+    "example"
+  ]
+}
