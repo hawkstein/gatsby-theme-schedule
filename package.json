@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "yarn workspace example develop",
-    "debug": "yarn workspace example debug",
-    "build": "yarn workspace example build"
+    "debug": "yarn workspace example debug"
   },
   "workspaces": [
     "@hawkstein/gatsby-theme-schedule",
