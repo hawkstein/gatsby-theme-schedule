@@ -102,7 +102,7 @@ Content for the event page. Any valid markdown / mdx will work here!
 
 As the .mdx files are parsed by Gatsby, source nodes for all the events days and locations will be generated.
 
-### theme-ui Components
+### Theme UI Components
 
 The theme is using `theme-ui` for layout and so anything provided by [theme-ui/components](https://theme-ui.com/components) is going to fit in.
 
