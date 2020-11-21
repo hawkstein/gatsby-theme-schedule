@@ -26,14 +26,16 @@ npm install @hawkstein/gatsby-theme-schedule
 ### Install Peer Dependencies
 
 ```
-yarn add gatsby gatsby-plugin-mdx gatsby-source-filesystem react react-dom @mdx-js/mdx @mdx-js/react
+yarn add gatsby gatsby-plugin-mdx gatsby-source-filesystem react react-dom @mdx-js/mdx @mdx-js/react gatsby-plugin-mdx @emotion/core @emotion/styled theme-ui gatsby-plugin-theme-ui gatsby-plugin-sharp gatsby-remark-images gatsby-transformer-sharp gatsby-image
 ```
 
 or
 
 ```
-npm install gatsby gatsby-plugin-mdx gatsby-source-filesystem react react-dom @mdx-js/mdx @mdx-js/react
+npm install gatsby gatsby-plugin-mdx gatsby-source-filesystem react react-dom @mdx-js/mdx @mdx-js/react gatsby-plugin-mdx @emotion/core @emotion/styled theme-ui gatsby-plugin-theme-ui gatsby-plugin-sharp gatsby-remark-images gatsby-transformer-sharp gatsby-image
 ```
+
+Woah! That's a lot of peer dependencies! Well, this is a Gatsby Theme so chances are you'll be installing these as part of combining this theme with other themes and plugins.
 
 ## Setup
 
@@ -67,7 +69,7 @@ module.exports = {
 
 ### Source data directory setup
 
-To add events create `.mdx` files in the `src/events` directory.
+To add events create `.mdx` files in the `src/events` directory. The source directory can be adjusted by setting the plugin option `contentPath`.
 
 <!-- prettier-ignore -->
 ```
@@ -82,13 +84,14 @@ To add events create `.mdx` files in the `src/events` directory.
 
 #### MDX Pages Setup
 
-Pages must include `date` and `start` in the `frontmatter`
+Pages must include `date` and `start` in the `frontmatter`. You'll probably to include `location` too but if it's omitted from all of the mdx then it will be ignored.
 
 ```
 // src/events/my-event.mdx
 ---
 date: 6/11/81
 start: 18:00
+location: Main Location
 ---
 
 # My Event
@@ -96,6 +99,8 @@ start: 18:00
 Content for the event page. Any valid markdown / mdx will work here!
 
 ```
+
+As the .mdx files are parsed by Gatsby, source nodes for all the events days and locations will be generated.
 
 ### theme-ui Components
 
@@ -127,11 +132,13 @@ export default {
   ...baseTheme,
   colors: {
     ...baseTheme.colors,
-    primary: "#FF4081",
-    background: "#232323",
+    primary: "#EEE",
+    background: "#000",
   },
 };
 ```
+
+Theme creates a redirect from /schedule to the 1st day of the schedule, if you want this to be implemented by your host then you should use the relevant plugin (e.g. Netlify plugin)
 
 ### Theme Options
 
