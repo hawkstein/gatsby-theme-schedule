@@ -1,0 +1,41 @@
+{
+  "name": "@hawkstein/gatsby-theme-schedule",
+  "version": "0.2.0",
+  "main": "index.js",
+  "author": "Liam Hawks <liamhawks@gmail.com>",
+  "description": "A Gatsby Theme for displaying events scheduled over a few days",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "theme-ui",
+    "mdx"
+  ],
+  "peerDependencies": {
+    "gatsby": "^2.27.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "gatsby-source-filesystem": "^2.6.0"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@mdx-js/mdx": "^1.6.18",
+    "@mdx-js/react": "^1.6.18",
+    "gatsby-plugin-mdx": "^1.2.46",
+    "gatsby-plugin-sharp": "^2.6.43",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-remark-images": "^3.3.40",
+    "gatsby-transformer-sharp": "^2.5.20",
+    "theme-ui": "^0.3.1",
+    "gatsby-image": "^2.4.21",
+    "luxon": "^1.25.0",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/theme-ui": "^0.3.7",
+    "@types/luxon": "^1.25.0",
+    "prettier": "^2.2.0"
+  }
+}
