@@ -16,7 +16,7 @@ export default () => {
         <p>
           {" "}
           Find out more at{" "}
-          <a href="https://www.github/hawkstein/gatsby-theme-schedule">
+          <a href="https://www.github.com/hawkstein/gatsby-theme-schedule">
             the Github repo
           </a>
         </p>
