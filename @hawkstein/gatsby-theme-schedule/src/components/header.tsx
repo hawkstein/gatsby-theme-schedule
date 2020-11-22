@@ -24,6 +24,9 @@ export default () => {
         sx={{
           justifyContent: "space-between",
           alignItems: menuOpen ? "start" : "center",
+          width: "max",
+          margin: "0 auto",
+          px: "3",
         }}
       >
         <Link to={basePath}>

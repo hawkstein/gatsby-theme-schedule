@@ -7,7 +7,15 @@ export default () => {
   const { footerLinks } = useScheduleOptions()
   return (
     <Box as="footer" variant="styles.header">
-      <Flex>
+      <Flex
+        sx={{
+          width: "max",
+          margin: "0 auto",
+          px: "3",
+          flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
         {footerLinks.map((link) => (
           <NavLink to={link.url} variant={"styles.titleLink"}>
             {link.label}

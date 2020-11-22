@@ -104,9 +104,8 @@ export const theme = {
     header: {
       maxWidth: "100%",
       backgroundColor: "primary",
-      padding: 4,
-      paddingLeft: 3,
-      paddingRight: 3,
+      px: 0,
+      py: 4,
     },
     titleLink: {
       ...baseLink,
