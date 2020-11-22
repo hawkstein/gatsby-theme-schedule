@@ -21,7 +21,9 @@ const Navigation: React.FC<NavProps> = ({ date }) => {
   `)
   const days = data.allScheduleDay.nodes
   const { useCollectionInURLs, collection, basePath } = useScheduleOptions()
-  const path = `${basePath}${useCollectionInURLs ? `${collection}/` : "/"}`
+  const path = `${basePath}${
+    useCollectionInURLs ? `${collection}/` : "/"
+  }`.replace(/\/\/+/g, "/")
   return (
     <Flex as="nav">
       {days.map((day) => (
