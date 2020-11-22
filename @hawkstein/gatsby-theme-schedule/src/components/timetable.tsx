@@ -5,10 +5,10 @@ type TimetableProps = {
   locations: Array<{
     fieldValue: string
     nodes: Array<{
-      slug: string
       startTime: string
       endTime: string
       title: string
+      path: string
       description: string
     }>
   }>
@@ -16,11 +16,11 @@ type TimetableProps = {
 
 const Timetable: React.FC<TimetableProps> = ({ locations }) => (
   <>
-    {locations.map(location => (
+    {locations.map((location) => (
       <div key={location.fieldValue}>
         <h3>{location.fieldValue}</h3>
-        {location.nodes.map(event => (
-          <EventCard key={event.slug} {...event} />
+        {location.nodes.map((event) => (
+          <EventCard key={event.path} {...event} />
         ))}
       </div>
     ))}
