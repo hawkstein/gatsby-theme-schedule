@@ -52,6 +52,8 @@ module.exports = {
 
 ### Theme options
 
+#### Example
+
 ```
 // gatsby-config.js
 module.exports = {
@@ -66,6 +68,25 @@ module.exports = {
   ]
 }
 ```
+
+| Option              | Default                           | Description                                                                                |
+| ------------------- | --------------------------------- | ------------------------------------------------------------------------------------------ |
+| basePath            | "/"                               | The base path which the theme will start at                                                |
+| collection          | "events"                          | Name for this specific collection of events                                                |
+| useCollectionInURLs | false                             | If set to true then the collection option will be prefixed in front of day and event slugs |
+| contentPath         | "src/events"                      | The location of the MDX files which will generate the event pages and day pages            |
+| heading             | "Events Schedule"                 | Title used in the header component                                                         |
+| locationsOrder      | []                                | An array of strings, this is used to create a custom sort for your locations               |
+| locationsLabel      | "Locations"                       | Label for the locations link in the header                                                 |
+| locationsSlug       | "locations"                       | The slug to use as part of the url for the link in the header                              |
+| scheduleLabel       | "Schedule"                        | Label for the schedule link in the header                                                  |
+| scheduleSlug        | "schedule"                        | The slug to use as part of the url for the link in the header                              |
+| use24Hour           | true                              | Should the theme use 24 hour times                                                         |
+| navLinks            | []                                | Array of objects of type { label: string, url: string }                                    |
+| footerLinks         | []                                | Array of objects of type { label: string, url: string }                                    |
+| actionLabel         | "Buy Tickets"                     | Label for the call to action button in the header                                          |
+| actionURL           | "/buy"                            | URL for the call to action button in the header                                            |
+| remarkImageOptions  | { maxWidth: 1200, withWebp: true} | Object to pass to 'gatsby-remark-images' plugin                                            |
 
 ### Source data directory setup
 
