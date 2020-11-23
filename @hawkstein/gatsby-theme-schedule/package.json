@@ -1,6 +1,6 @@
 {
   "name": "@hawkstein/gatsby-theme-schedule",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "index.js",
   "author": "Liam Hawks <liamhawks@gmail.com>",
   "description": "A Gatsby Theme for displaying events scheduled over a few days",
